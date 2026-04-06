@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("/assets/fonts/Fraunces.woff2") format("woff2");
+  font-weight: 300 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PlusJakartaSans";
+  src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+  font-weight: 300 700;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Warm cream background #F7EFE1 → oklch ~0.95 0.025 85 */
+    --background: 0.95 0.025 85;
+    /* Near-black text #1F2430 → oklch ~0.22 0.018 255 */
+    --foreground: 0.22 0.018 255;
+
+    /* Card: slightly lighter cream */
+    --card: 0.98 0.015 85;
+    --card-foreground: 0.22 0.018 255;
+
+    --popover: 0.98 0.015 85;
+    --popover-foreground: 0.22 0.018 255;
+
+    /* Primary: orange/amber #D08A2C → oklch ~0.65 0.14 65 */
+    --primary: 0.65 0.14 65;
+    --primary-foreground: 0.98 0.01 85;
+
+    /* Secondary: teal #1F6F6A → oklch ~0.46 0.09 185 */
+    --secondary: 0.46 0.09 185;
+    --secondary-foreground: 0.98 0.01 85;
+
+    /* Muted: #E9DDC8 → oklch ~0.88 0.025 80 */
+    --muted: 0.88 0.025 80;
+    --muted-foreground: 0.53 0.012 255;
+
+    /* Accent: teal light tint */
+    --accent: 0.88 0.03 185;
+    --accent-foreground: 0.46 0.09 185;
+
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+
+    /* Border: #E9DDC8 → oklch ~0.88 0.025 80 */
+    --border: 0.88 0.025 80;
+    --input: 0.88 0.025 80;
+    --ring: 0.65 0.14 65;
+
+    /* Star yellow #F2B233 → oklch ~0.78 0.16 70 */
+    --star: 0.78 0.16 70;
+
+    --chart-1: 0.65 0.14 65;
+    --chart-2: 0.46 0.09 185;
+    --chart-3: 0.78 0.16 70;
+    --chart-4: 0.6 0.12 130;
+    --chart-5: 0.55 0.15 25;
+
+    --sidebar: 0.98 0.015 85;
+    --sidebar-foreground: 0.22 0.018 255;
+    --sidebar-primary: 0.65 0.14 65;
+    --sidebar-primary-foreground: 0.98 0.01 85;
+    --sidebar-accent: 0.88 0.025 80;
+    --sidebar-accent-foreground: 0.22 0.018 255;
+    --sidebar-border: 0.88 0.025 80;
+    --sidebar-ring: 0.65 0.14 65;
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+  }
+}
